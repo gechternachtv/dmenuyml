@@ -1,0 +1,11 @@
+---
+liststuff: ls
+(･ω･ ): |-
+  echo '　　∧∧
+  　(･ω･ )
+  　　uu＿）～' 
+innermenu:
+  lol: cowsay 'KKKKKKKK'
+  eveninnermenu:
+    d menu: dmenu_run
+    dust: dust
