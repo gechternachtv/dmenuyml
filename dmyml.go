@@ -55,7 +55,10 @@ func bar(options map[string]interface{}) {
 		bar(subOptionsMap)
 	} else {
 		if cmd, ok := filteredfoo.(string); ok {
-			output, err := exec.Command(cmd).Output()
+			parts := strings.Split(cmd, " ")
+			command := parts[0]
+			args := parts[1:]
+			output, err := exec.Command(command, args...).Output()
 			if err != nil {
 				fmt.Printf("error executing command: %s\n", err)
 				return
